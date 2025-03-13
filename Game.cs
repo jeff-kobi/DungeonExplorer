@@ -5,7 +5,7 @@ namespace DungeonExplorer
 {
     internal class Game
     {
-        private Player player;
+        private Player player; private Player player;1
         private Room currentRoom;
 
         public Game()
