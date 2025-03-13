@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
@@ -10,11 +6,21 @@ namespace DungeonExplorer
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.Start();
-            Console.WriteLine("Waiting for your Implementation");
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            try
+            {
+                Game game = new Game();
+                game.Start();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine(ex.StackTrace);
+            }
+            finally
+            {
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
+            }
         }
     }
 }
